@@ -288,7 +288,7 @@ postCalendar: true
 # the Gitalk config，default disabled
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
-  enable: true
+  enable: false
   owner: llliuyang
   repo: https://github.com/llliuyang/blogComments
   oauth: 
