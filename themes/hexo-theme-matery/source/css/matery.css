@@ -2178,3 +2178,38 @@ footer .copy-right {
         font-size: 2.1rem;
     }
 }
+
+#articleContent h1,
+#articleContent h2, 
+#articleContent h3, 
+#articleContent h4, 
+#articleContent h5, 
+#articleContent h6{
+    cursor: pointer;
+    color: #f47466;
+    transition: all .3s linear;
+}
+
+#articleContent h1:hover,
+#articleContent h2:hover, 
+#articleContent h3:hover, 
+#articleContent h4:hover, 
+#articleContent h5:hover, 
+#articleContent h6:hover{
+    transform: translateX(4px);
+    
+}
+
+#articleContent h1::before,
+#articleContent h2::before, 
+#articleContent h3::before, 
+#articleContent h4::before, 
+#articleContent h5::before, 
+#articleContent h6::before {
+ content: '📌';
+ font-size: 20px;
+ /* width: 20px;
+ height: 20px; */
+ opacity: 0.8;
+}
+
