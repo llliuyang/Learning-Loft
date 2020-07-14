@@ -87,7 +87,7 @@ music:
   order: 'random'   # 音频循环顺序, 可选值: 'list', 'random'
   preload: 'auto'   # 预加载，可选值: 'none', 'metadata', 'auto'
   volume: 0.6       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
-  listFolded: false  # 列表默认折叠
+  listFolded: true  # 列表默认折叠
   hideLrc: true     # 隐藏歌词
 
 # Whether to display the videos.
@@ -193,10 +193,10 @@ postInfo:
   update: false # 更新日期
   wordCount: true # 文章字数统计
   totalCount: true # 站点总文章字数
-  min2read: false # 文章阅读时长
+  min2read: true # 文章阅读时长
   readCount: false # 文章阅读次数
 
-# Whether to activate the 'love' effect of clicking on the page.
+# Whether to activate the 'love' effect of clicking on the page.true
 # 是否激活点击页面的'爱心'效果，默认激活.
 clicklove:
   enable: true
@@ -289,22 +289,22 @@ postCalendar: true
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
   enable: false
-  owner: llliuyang
-  repo: https://github.com/llliuyang/blogComments
+  owner: 
+  repo: 
   oauth: 
-    clientId: 7034c9ce773b1a948a4d
-    clientSecret: d50497b7512dd9bb2113fe00f70a656048228a84
+    clientId: 
+    clientSecret: 
   admin: llliuyang
 
 # the Gitment config，default disabled
 # Gitment 评论模块的配置，默认为不激活
 gitment:
   enable: false
-  owner:
-  repo:
+  owner: 
+  repo: 
   oauth:
-    clientId:
-    clientSecret:
+    clientId: 
+    clientSecret: 
 
 # disqus config, default disabled
 # Disqus评论模块的配置，默认为不激活
@@ -322,15 +322,15 @@ livere:
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
-  enable: false
-  appId:
-  appKey:
-  notify: false
-  verify: false
+  enable: true
+  appId: wodbEEv0c7Q3JNrxCTE3RPRm-gzGzoHsz
+  appKey: kCsxAxnaQx8trlt2OCppeWVz
+  notify: true
+  verify: true
   visitor: true
-  avatar: 'mm' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
+  avatar: 'retro' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
   pageSize: 10
-  placeholder: 'just go go' # Comment Box placeholder
+  placeholder: '说点什么吧...' # Comment Box placeholder
   background: /medias/comment_bg.png
 
 # The configuration of the MiniValine comment module is not activated by default.
@@ -514,8 +514,8 @@ daovoice:
 
 # Tidio online contact
 tidio:
-  enable: false
-  public_key:
+  enable: true
+  public_key: mldonjzwruhbj1qqcrotbejmhxcdftas
 
 #背景canvas-nest
 canvas_nest:
@@ -552,14 +552,16 @@ addthis:
 # 打字效果副标题.
 # 如果有符号 ‘ ，请在 ’ 前面加上 \
 subtitle:
-  enable: true
+  enable: false
   loop: true # 是否循环
   showCursor: true # 是否显示光标
   startDelay: 300 # 开始延迟
   typeSpeed: 200 # 打字速度
   backSpeed: 100 # 删除速度
-  sub1: 从来没有真正的绝境，只有心灵的迷途
-  sub2: 今日事，今日毕
+  sub1:  从来没有真正的绝境，只有心灵的迷途
+  sub2:  今日事，今日毕
+
+
 
 # 手机二级菜单.
 navMenu:
