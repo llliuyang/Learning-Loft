@@ -602,8 +602,8 @@ header .go-back i {
 }
 
 .bg-cover:after {
-    -webkit-animation: rainbow 60s infinite;
-    animation: rainbow 60s infinite;
+    -webkit-animation: rainbow linear 180s infinite;
+    animation: rainbow linear 180s infinite;
 }
 
 .bg-cover:before,

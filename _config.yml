@@ -44,6 +44,7 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+# 代码高亮设置
 highlight:
   enable: false
   line_number: true
@@ -52,11 +53,19 @@ highlight:
   wrap: true
   hljs: false
 #新增prism插件配置  代码高亮
-prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
-  theme: 'tomorrow'
-  line_number: true    # default false
-  custom_css:
+# 旧版写法
+# prism_plugin:
+#  mode: 'preprocess'    # realtime/preprocess
+#  theme: 'tomorrow'
+#  line_number: true    # default false
+#  custom_css:
+# 新版写法
+prismjs:
+  enable: true
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
