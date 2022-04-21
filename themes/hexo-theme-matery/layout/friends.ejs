@@ -1,5 +1,10 @@
 <%- partial('_partial/bg-cover') %>
 <style>
+    :root {
+    --main-color: #fc568c;
+    --black: #3C4858;
+    --main-gradient: linear-gradient(to right, #F77062 0%, #FE5196 100%);
+}
     .friends-container {
         margin-top: -100px;
         margin-bottom: 30px;
@@ -7,7 +12,7 @@
 
     .friends-container .tag-title {
         margin-bottom: 10px;
-        color: #3C4858;
+        color: var(--main-color);
         font-size: 1.75rem;
         font-weight: 400;
     }

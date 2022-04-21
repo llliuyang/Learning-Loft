@@ -3,6 +3,15 @@
 
 /* 原始绿色主题色：#4CBF30 0%, #0F9D58 100% */
  /* #F77062 0%, #FE5196 100% */
+
+ /* 粉色主题  linear-gradient(to right, #F77062 0%, #FE5196 100%,) */
+ :root{
+     --black: #3C4858;
+     --green: #1abc9c;
+     --dark-green:#42b983;
+     --main-color: #fc568c;
+     --main-gradient: linear-gradient(to right, #F77062 0%, #FE5196 100%)
+ }
 @media only screen and (max-width: 601px) {
     .container {
         width: 95%;
@@ -95,7 +104,7 @@ hr {
 }
 
 blockquote {
-    border-left: 5px solid #42b983;
+    border-left: 5px solid var(--main-color);
     padding: 1rem 0.8rem 0.2rem 0.8rem;
     color: #666;
     background-color: rgba(66, 185, 131, .1);
@@ -272,7 +281,7 @@ mark {
     /* 原始绿色主题 */
     /* background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); */
     /* 自定义 粉红色 */
-    background-image: linear-gradient(to right, #F77062 0%, #FE5196 100%);
+    background-image: var(--main-gradient);
 }
 
 .text-color {
@@ -419,7 +428,7 @@ header .side-nav .social-link {
 
 .cover-btns a:hover {
     border: 1px solid #f44336;
-    background-color: #f44336;
+    background: var(--main-gradient);
     box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42),
             0 4px 23px 0 rgba(0, 0, 0, 0.12),
             0 8px 10px -5px rgba(233, 30, 99, 0.2);
@@ -539,12 +548,17 @@ header .side-nav .social-link {
     text-align: center;
 }
 
-.cover-social-link a {
+.cover-social-link a i{
     padding: 0 15px;
     font-size: 1.35rem;
     color: #fff;
+    transition: .2s linear;
+    /* transform: scale(1.0); */
 }
-
+.cover-social-link a:hover i{
+    /* color: var(--main-color); */
+    transform: scale(1.6);
+}
 header .go-back {
     float: left;
     position: relative;
@@ -572,8 +586,13 @@ header .go-back i {
     background-position: center center;
     background-size: cover;
     transform: translate3d(0px, 0px, 0px);
+    animation: Scale linear 60s infinite alternate;
 }
-
+@keyframes Scale {
+    0%{background-size: 100%;}
+    50%{background-size: 150%;}
+    100%{background-size:200%;}
+}
 .index-cover {
     height: 100vh;
 }
@@ -734,10 +753,12 @@ header .go-back i {
 
 .dream .title,
 .music-player .title,
-.video-player .title {
+.video-player .title,
+.recommend .title {
     margin-bottom: 20px;
     font-size: 2rem;
     font-weight: 700;
+    color: var(--main-color);
 }
 
 .dream .text {
@@ -911,7 +932,7 @@ article a {
 
 article a:hover {
     font-weight: bold;
-    color: #42b983;
+    color: var(--main-color);
     text-decoration: underline;
 }
 
@@ -1094,7 +1115,7 @@ article .article-tags .chip {
     border-radius: 15px;
     margin-right: 5px;
     margin-bottom: 2px;
-    color: #42b983;
+    color: var(--main-color);
     background: #fff;
     border: 1px solid;
     transition: all 0.6s ease-in-out;
@@ -1102,17 +1123,17 @@ article .article-tags .chip {
 
 #artDetail .tag_share .article-tag .chip:hover {
     color: #fff;
-    background: #42b983;
+    background: var(--main-color);
 }
 
 #artDetail .post-cate {
     float: right;
-    color: #42b983;
+    color: var(--main-color);
 }
 
 #artDetail .post-cate a {
     padding-right: 5px;
-    color: #42b983;
+    color: var(--main-color);
     font-weight: 500;
 }
 
@@ -1131,7 +1152,7 @@ article .article-tags .chip {
 
 #artDetail .post-info .post-category:hover {
     font-weight: bold;
-    color: #42b983;
+    color: var(--main-color);
     text-decoration: underline;
 }
 
@@ -1194,7 +1215,7 @@ article .article-tags .chip {
 
 #artDetail .reprint a {
     font-size: 1.05rem;
-    color: #42b983;
+    color: var(--main-color);
     font-weight: 500;
 }
 
@@ -1210,7 +1231,7 @@ article .article-tags .chip {
 
 #articleContent a {
     padding: 0 2px;
-    color: #42b983;
+    color: var(--main-color);
     font-weight: 500;
     text-decoration: underline;
     word-wrap: break-word;
@@ -1313,7 +1334,7 @@ thead {
 
 .chip-container .tag-title {
     margin-bottom: 10px;
-    color: #3C4858;
+    color: var(--main-color);
     font-size: 1.75rem;
     font-weight: 400;
 }
@@ -1349,11 +1370,12 @@ thead {
     cursor: pointer;
     box-shadow: 0 3px 5px rgba(0, 0, 0, .12);
     z-index: 0;
+    transition: .3s linear;
 }
 
 .chip-container .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
+    background: var(--main-gradient) !important;
 }
 
 .chip .tag-length {
@@ -1367,11 +1389,22 @@ thead {
     margin-top: 1px;
 }
 
+.chip-container .chip:hover .tag-length{
+    color: #fff;
+}
+
 .chip-active .tag-length {
     color: #fff;
 }
 
 /* archive page. */
+#cd-timeline .cd-timeline-img{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
 #cd-timeline .year {
     position: relative;
     width: 80px;
@@ -1644,7 +1677,7 @@ thead {
 }
 
 .post-statis .statis .count a {
-    color: #42b983;
+    color: var(--main-color);
 }
 
 .post-statis .statis .name {
@@ -1665,18 +1698,28 @@ thead {
     margin: 0 0.5rem;
     padding: 0;
     color: #fff;
-    border: 1px solid #0f9d58;
-    background: radial-gradient(#4cbf30, #0f9d58);
+    border: 1px solid var(--main-color);
+    background: var(--main-gradient);
     font-size: 0.9rem;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
+    transition: 0.2s linear;
+}
+#aboutme .social-link a:hover,
+.profile .avatar:hover img.avatar-img{
+    transform: scale(1.4);
 }
 
-.profile .avatar-img {
+.profile .avatar {
     max-width: 160px;
     width: 100%;
     margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
     transform: translate3d(0, -65%, 0);
+}
+.profile .avatar-img{
+    transition: all 10s linear;
 }
 
 .profile .author {
@@ -1691,7 +1734,9 @@ thead {
     margin-bottom: 0.1rem;
     font-size: 1.8rem;
     font-weight: 500;
-    color: #3C4858;
+    /* color: #3C4858; */
+    color: var(--main-color);
+    font-weight: bold;
 }
 
 .profile .author .career {
@@ -1718,13 +1763,14 @@ thead {
     padding: 3.8rem 1.5rem 0.8rem 1.5rem;
 }
 
-.post-charts,
-.title,
+.post-charts .title,
 .my-projects .title,
 .my-skills .title,
-.my-gallery .title {
-    font-size: 2rem;
+.my-gallery .title,
+.other-skills .sub-title {
+    font-size: 1.8rem;
     margin-bottom: 2.25rem;
+    color: var(--main-color);
 }
 
 .my-projects .info {
@@ -1827,9 +1873,9 @@ thead {
     margin-top: 2rem;
 }
 
-.other-skills .sub-title {
+/* .other-skills .sub-title {
     font-size: 1.5rem;
-}
+} */
 
 .other-skills .tag-chips {
     max-width: 600px;
@@ -1909,7 +1955,8 @@ footer .copy-right {
 
 .search-result-list .search-result-title {
     font-size: 1.4rem;
-    color: #42b983;
+    /* color: var(--main-color); */
+    color: var(--main-color);
 }
 
 .search-result-list li {
