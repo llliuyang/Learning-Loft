@@ -1,10 +1,5 @@
 <%- partial('_partial/bg-cover') %>
 <style>
-    :root {
-    --main-color: #fc568c;
-    --black: #3C4858;
-    --main-gradient: linear-gradient(to right, #F77062 0%, #FE5196 100%);
-}
     .friends-container {
         margin-top: -100px;
         margin-bottom: 30px;
@@ -12,7 +7,7 @@
 
     .friends-container .tag-title {
         margin-bottom: 10px;
-        color: var(--main-color);
+        color: #3C4858;
         font-size: 1.75rem;
         font-weight: 400;
     }
@@ -231,11 +226,15 @@
                 </article>
             </div>
         </div>
-        <div class="card">
-            <div class="card-content">
-                <%- page.content %>
+
+        <% if (page.content && page.content.length > 0) { %>
+            <div class="card">
+                <div class="card-content">
+                    <%- page.content %>
+                </div>
             </div>
-        </div>
+        <% } %>
+
         <div class="card">
 
             <% if (theme.gitalk && theme.gitalk.enable) { %>

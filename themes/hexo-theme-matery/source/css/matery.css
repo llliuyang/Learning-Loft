@@ -285,7 +285,7 @@ mark {
 }
 
 .text-color {
-    color: #0f9d58 !important;
+    color: var(--main-color) !important;
 }
 
 .white-color {
@@ -926,7 +926,8 @@ header .go-back i {
 
 article a {
     margin-right: 0 !important;
-    color: #525f7f;
+    /* color: #525f7f; */
+    color: var(--main-color);
     text-transform: none !important;
 }
 
@@ -974,6 +975,7 @@ article .article-content .summary {
 
 article .article-content .publish-author {
     float: right;
+    color: var(--main-color);
 }
 
 .publish-date .icon-date {

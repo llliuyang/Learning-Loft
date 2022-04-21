@@ -46,7 +46,7 @@ relative_link: false
 future: true
 # 代码高亮设置
 highlight:
-  enable: false
+  enable: true
   line_number: true
   auto_detect: false
   tab_replace: ''
@@ -59,6 +59,7 @@ highlight:
 #  theme: 'tomorrow'
 #  line_number: true    # default false
 #  custom_css:
+
 # 新版写法
 prismjs:
   enable: true

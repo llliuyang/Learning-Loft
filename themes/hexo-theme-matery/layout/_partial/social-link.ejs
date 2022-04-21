@@ -29,7 +29,7 @@
 <% } %>
 
 <% if (theme.socialLink.weibo) { %>
-    <a href="<%= theme.socialLink.weibo %>" class="tooltipped" target="_blank" data-tooltip="关注我的微博:变质的洋流" data-position="top" data-delay="50">
+    <a href="<%= theme.socialLink.weibo.url %>" class="tooltipped" target="_blank" data-tooltip="关注我的微博: <%= theme.socialLink.weibo.nick %>" data-position="top" data-delay="50">
         <i class="fab fa-weibo"></i>
     </a>
 <% } %>
