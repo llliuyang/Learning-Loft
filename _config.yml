@@ -134,3 +134,10 @@ githubEmojis:
   inject: true
   styles:
   customEmojis:  
+
+# 今日诗词开关
+jinrishici:
+  enable: true
+  api: https://sdk.jinrishici.com/v2/browser/jinrishici.js
+  autoRefresh: true  # 是否定时刷新
+  delay: 20000 # 刷新的频率,毫秒计算

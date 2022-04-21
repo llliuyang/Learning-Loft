@@ -24,7 +24,27 @@
                     });
                 </script>
                 <% } else { %>
-                    <%= config.description %>
+                    <% if (config.jinrishici.enable) { %>
+                    <!-- 动态显示诗句 -->
+                    <span id="poem_sentence">正在加载今日诗词....</span>
+                    <div id="poem_info"></div>
+                    <script src="<%- config.jinrishici.api %>" charset="utf-8"></script>
+                    <script src="<%- url_for(theme.libs.js.mine) %>"></script>
+                     <!-- 定时刷新        -->
+                     <script>
+                        let timerPoem = null;
+                        let time = <%= config.jinrishici.delay %>;
+                        let flag = <%= config.jinrishici.autoRefresh %>;
+                        console.log(flag)
+                        timerPoem = setInterval(function(){
+                          jinrishici.load(loadPoem);
+                        },time);
+                        !flag && clearInterval(timerPoem)
+                    </script>               
+                    <!-- 今日诗词关闭,显示网站描述 -->
+                    <% } else { %>
+                        <%= config.description %>
+                    <% } %> 
                 <% } %>
             </div>
         </div>
