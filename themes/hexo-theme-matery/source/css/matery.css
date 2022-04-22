@@ -1,17 +1,6 @@
 /*全局基础样式*/
 /*小屏幕下(手机类)的样式*/
 
-/* 原始绿色主题色：#4CBF30 0%, #0F9D58 100% */
- /* #F77062 0%, #FE5196 100% */
-
- /* 粉色主题  linear-gradient(to right, #F77062 0%, #FE5196 100%,) */
- :root{
-     --black: #3C4858;
-     --green: #1abc9c;
-     --dark-green:#42b983;
-     --main-color: #fc568c;
-     --main-gradient: linear-gradient(to right, #F77062 0%, #FE5196 100%)
- }
 @media only screen and (max-width: 601px) {
     .container {
         width: 95%;
@@ -49,6 +38,10 @@ body {
     background-color: #eaeaea;
     margin: 0;
     color: #34495e;
+    /* 添加hidden
+     * 解决关闭目录时,鼠标划过下方文章时动效超出宽度而增加底部滚动条的问题
+    */
+    overflow-x: hidden; 
 }
 
 h1 {
