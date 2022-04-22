@@ -12,7 +12,11 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by';
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="<%- url_for('/about') %>" rel="external nofollow noreferrer"><%- page.author || config.author %></a>
+                    <% if (page.author === config.author || !page.author) { %>
+                        <a href="<%- url_for('/about') %>" rel="external nofollow noreferrer"><%- page.author || config.author %></a>
+                    <% } else { %>
+                        <a href="javascript:void(0)" rel="external nofollow noreferrer"><%- page.author || config.author %></a>
+                    <% } %>
                 </span>
             </div>
             <div class="reprint__type">
@@ -35,7 +39,7 @@ let reprintPolicy = page.reprintPolicy || theme.reprint.default || 'cc_by';
                     <%= __('use') %>
                     <a href="<%= __('cc_by_url') %>" rel="external nofollow noreferrer" target="_blank"><%= __('cc_by_name') %></a>
                     <%= __('licensed') %>
-                    <a href="<%- config.url %>" target="_blank"><%- page.author || config.title %></a>
+                    <a href="<%- config.url %>" target="_blank"><%- config.title %></a>
                     !
                 </span>
             </div>
