@@ -35,9 +35,9 @@
                         let timerPoem = null;
                         let time = <%= config.jinrishici.delay %>;
                         let flag = <%= config.jinrishici.autoRefresh %>;
-                        console.log(flag)
+                        !timerPoem && jinrishici.load(loadPoem);
                         timerPoem = setInterval(function(){
-                          jinrishici.load(loadPoem);
+                          flag && jinrishici.load(loadPoem);
                         },time);
                         !flag && clearInterval(timerPoem)
                     </script>               

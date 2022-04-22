@@ -4,6 +4,3 @@ function loadPoem(result) {
   sentence.textContent = result.data.content
   info.textContent = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
 }
-jinrishici.load(loadPoem);
-
-

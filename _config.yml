@@ -135,7 +135,8 @@ githubEmojis:
   styles:
   customEmojis:  
 
-# 今日诗词开关
+# 今日诗词配置
+# 显示优先级为：主题的subtitle > 今日诗词 ，当前两者都关闭时，显示网站description
 jinrishici:
   enable: true
   api: https://sdk.jinrishici.com/v2/browser/jinrishici.js
