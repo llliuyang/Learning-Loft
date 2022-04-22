@@ -214,38 +214,39 @@ profile:
 # config my projects informations in about page.
 # If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
+# 新增对于无链接的处理，如果不想跳转，请将链接处置为空 或者 false 
 myProjects:
   enable: true
   data:
     双重搜索栏:
       icon: fa fa-search-plus
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
-      url: https://github.com/llliuyang/Double-Slide-Search-Bar
+      url: # 不填写 或者 false 将不会再进行跳转
       desc: 网页的双重搜索栏demo
     滚动数字:
         icon: fa fa-database
         iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/llliuyang/slideNumber
+        url: 
         desc: 华丽的数字滚动js特效
     华丽弹幕:
         icon: fa fa-code
         iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
-        url: https://github.com/llliuyang/JBarrager
+        url: 
         desc: 高并发弹幕JS插件，华丽来袭
     平滑锚点:
         icon: fa fa-anchor
         iconBackground: 'linear-gradient(to bottom right, #FF9800 0%, #F57C00 100%)'
-        url: https://github.com/llliuyang/Jump-to-the-corresponding-anchor 
+        url: 
         desc: 平滑滚动到对应锚点，让滚动不再僵硬
     IOS时钟:
         icon: fa fa-clock
         iconBackground: 'linear-gradient(to bottom right, #7367C2 0%, #7367F0 100%)'
-        url: https://github.com/llliuyang/Ios-Clock 
+        url: 
         desc: IOS经典时钟桌面图标 
     设备判断:
         icon: fa fa-desktop
         iconBackground: 'linear-gradient(to bottom right, #2dda7a 0%, #28C76F 100%)'
-        url: https://github.com/llliuyang/Judging-device
+        url: 
         desc: 判断设备类型，方便做一些功能     
       
 
@@ -607,7 +608,7 @@ jsDelivr:
 # 网站背景图
 background:
   enable: true
-  url: "https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg"
+  url: "https://s1.ax1x.com/2022/04/22/L2DdKS.png"
 
 # 说说 https://artitalk.js.org/
 artitalk:
