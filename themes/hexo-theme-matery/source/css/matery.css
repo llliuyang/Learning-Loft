@@ -5,12 +5,34 @@
     .container {
         width: 95%;
     }
+    .bg-cover{
+        animation: ScaleSmall linear 60s infinite alternate !important;
+    }
+    .cover-social-link{
+        top: 30vh !important
+    }
+    header .side-nav .fa-fw{
+        width: 0.2rem !important
+    }
 }
 
 /*中等屏幕下(平板类)的样式*/
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
         width: 90%;
+    }
+    #articleContent p{
+        font-size: 1.2rem !important;
+        line-height: 2rem !important;
+    }
+    .cover-social-link{
+        top: 30vh !important
+    }
+    .bg-cover{
+        animation: ScaleSmall linear 60s infinite alternate !important;
+    }
+    header .side-nav .fa-fw{
+        width: 0.2rem !important
     }
 }
 
@@ -36,6 +58,7 @@
 
 body {
     background-color: #eaeaea;
+    background-position: center;
     margin: 0;
     color: #34495e;
     /* 添加hidden
@@ -536,7 +559,7 @@ header .side-nav .social-link {
 
 .cover-social-link {
     position: relative;
-    top: 23vh;
+    top: 20vh;
     width: 100%;
     text-align: center;
 }
@@ -585,6 +608,11 @@ header .go-back i {
     0%{background-size: 100%;}
     50%{background-size: 150%;}
     100%{background-size:200%;}
+}
+@keyframes ScaleSmall {
+    0%{background-size: 200%;}
+    50%{background-size: 300%;}
+    100%{background-size:400%;}
 }
 .index-cover {
     height: 100vh;
@@ -757,6 +785,7 @@ header .go-back i {
 .dream .text {
     opacity: .6;
     font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 .music-player,
