@@ -2,19 +2,19 @@
 
 
 /* 原始绿色主题色：#4CBF30 0%, #0F9D58 100% */
- /* #F77062 0%, #FE5196 100% */
+/* #F77062 0%, #FE5196 100% */
 
- /* 粉色主题  linear-gradient(to right, #F77062 0%, #FE5196 100%,) */
- :root{
+/* 粉色主题  linear-gradient(to right, #F77062 0%, #FE5196 100%,) */
+:root {
     --black: #3C4858;
     --green: #1abc9c;
-    --dark-green:#42b983;
+    --dark-green: #42b983;
     --main-color: #fc568c;
     --main-gradient: linear-gradient(to right, #F77062 0%, #FE5196 100%)
 }
 
 /* hexo-filter-github-emojis */
-.github-emoji{
+.github-emoji {
     height: 2em;
     width: 2em;
     display: inline-block !important;
@@ -22,83 +22,114 @@
     margin: 0 3px !important;
     padding: 0;
 }
-.github-emoji:hover{
+
+.github-emoji:hover {
     animation: emoji-face 5s infinite ease-in-out;
 }
+
 @keyframes emoji-face {
     2% {
         transform: translate(0, 1.5px) rotate(1.5deg);
     }
+
     4% {
         transform: translate(0, -1.5px) rotate(-0.5deg);
     }
+
     6% {
         transform: translate(0, 1.5px) rotate(-1.5deg);
     }
+
     8% {
         transform: translate(0, -1.5px) rotate(-1.5deg);
     }
+
     10% {
         transform: translate(0, 2.5px) rotate(1.5deg);
     }
+
     12% {
         transform: translate(0, -0.5px) rotate(1.5deg);
     }
+
     14% {
         transform: translate(0, -1.5px) rotate(1.5deg);
     }
+
     16% {
         transform: translate(0, -0.5px) rotate(-1.5deg);
     }
+
     18% {
         transform: translate(0, 0.5px) rotate(-1.5deg);
     }
+
     20% {
         transform: translate(0, -1.5px) rotate(2.5deg);
     }
+
     22% {
         transform: translate(0, 0.5px) rotate(-1.5deg);
     }
+
     24% {
         transform: translate(0, 1.5px) rotate(1.5deg);
     }
+
     26% {
         transform: translate(0, 0.5px) rotate(0.5deg);
     }
+
     28% {
         transform: translate(0, 0.5px) rotate(1.5deg);
     }
 }
 
-#rewardModal .reward-title{
+#rewardModal .reward-title {
     color: var(--main-color)
 }
 
 /* 滚动条美化 */
 ::-webkit-scrollbar {
     width: 6px;
-  } /* 这是针对缺省样式 (必须的) */
+}
 
-  ::-webkit-scrollbar-track {
-      background: transparent;
-  } /* 滚动条的滑轨背景颜色 */
-  
-  ::-webkit-scrollbar-thumb {
-      border-radius: 100px;
-      background-color: var(--main-color);
-  } /* 滑块颜色 */
-  
+/* 这是针对缺省样式 (必须的) */
 
-  ::-webkit-scrollbar-button {
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* 滚动条的滑轨背景颜色 */
+
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: var(--main-color);
+}
+
+/* 滑块颜色 */
+
+
+::-webkit-scrollbar-button {
     display: none;
-  } /* 滑轨两头的监听按钮颜色 */
-  
-  ::-webkit-scrollbar-corner {
-      background-color: #fff;
-  } /* 横向滚动条和纵向滚动条相交处尖角的颜色 */
+}
+
+/* 滑轨两头的监听按钮颜色 */
+
+::-webkit-scrollbar-corner {
+    background-color: #fff;
+}
+
+/* 横向滚动条和纵向滚动条相交处尖角的颜色 */
 
 
-  /* 暗绿色重写 */
-  .toc-widget .toc-title{
-      color: var(--dark-green)
-  }
+/* 暗绿色重写 */
+.toc-widget .toc-title {
+    color: var(--dark-green)
+}
+
+@media only screen and (min-width: 993px){
+    .row .col.l4 {
+        width: 33.28%  /* 解决宽屏三个卡片鼠标滑过可能会出现白色边边的问题*/
+    }
+}
