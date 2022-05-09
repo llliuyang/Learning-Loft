@@ -6,7 +6,7 @@
     } else {
         site.posts.forEach(function (post) {
             if (post.top) {
-                topPosts.push(post);
+                topPosts.unshift(post);
             }
         });
     }
